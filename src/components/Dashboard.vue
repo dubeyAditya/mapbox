@@ -1,7 +1,21 @@
 <template>
   <div id="map-container">
-    <div> <MapBox :name="'locality'" :features="localityFeatures" @onLayerClick="onLayerClick"/></div>
-    <div> <MapBox :name="'poincode'" :features="pinCodeFeatures" @onLayerClick="onLayerClick"/></div>
+    <div>
+      <MapBox
+        :name="'locality'"
+        :features="locality.features"
+        :fields="locality.fields"
+        @onLayerClick="onLayerClick"
+      />
+    </div>
+    <div>
+      <MapBox
+        :name="'poincode'"
+        :features="pinCode.features"
+        :fields="pinCode.fields"
+        @onLayerClick="onLayerClick"
+      />
+    </div>
   </div>
 </template>
 
@@ -11,16 +25,16 @@ import locality from "../json/locality.json";
 import pincode from "../json/pincode.json";
 export default {
   name: "Dashboard",
-  data(){
+  data() {
     return {
-      localityFeatures: locality.features,
-      pinCodeFeatures: pincode.features
-    }
+      locality: locality,
+      pinCode: pincode
+    };
   },
   components: {
     MapBox
   },
-  methods:{
+  methods: {
     onLayerClick(attributes){
         alert(JSON.stringify(attributes,null,4))
     }
@@ -29,9 +43,9 @@ export default {
 </script>
 
 <style>
-#map-container{
+#map-container {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-auto-flow: row;
   grid-gap: 1rem;
   height: 60vh;

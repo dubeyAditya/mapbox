@@ -15,6 +15,7 @@ export default {
 </script>
 
 <style>
+/* @import 'https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css'; */
 body, #root {
   height: 100vh;
 }
