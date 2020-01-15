@@ -1,8 +1,10 @@
-import Vue from 'vue'
-import App from './AppContainer.vue'
+import Vue from 'vue';
+import App from './AppContainer.vue';
+import vuetify from './plugins/vuetify';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#root')
+    vuetify,
+    render: h => h(App)
+}).$mount('#root');
