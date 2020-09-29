@@ -4,7 +4,6 @@
       :name="'poincode'"
       :features="pinCode.features"
       :fields="pinCode.fields"
-      @onLayerClick="onLayerClick"
     />
   </div>
 </template>

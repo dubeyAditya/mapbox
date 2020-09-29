@@ -3,7 +3,6 @@
         :name="'locality'"
         :features="locality.features"
         :fields="locality.fields"
-        @onLayerClick="onLayerClick"
       />
 </template>
 <script>
