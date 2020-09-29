@@ -132,53 +132,12 @@ export default {
 </script>
 
 <style>
-.mapboxgl-popup {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: -webkit-flex;
-  display: flex;
-  will-change: transform;
-  pointer-events: none;
-  max-width: 400px;
-  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+.mapboxgl-map {
+  overflow: unset;
+
 }
 
-.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
-  align-self: center;
-  border-bottom: none;
-  border-top-color: #fff;
-}
-
-.mapboxgl-popup-tip {
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  z-index: 1;
-}
-
-.mapboxgl-popup-anchor-bottom {
-  flex-direction: column-reverse;
-}
-
-.mapboxgl-popup-close-button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  border: 0;
-  border-radius: 0 3px 0 0;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.mapboxgl-popup-content {
-  position: relative;
-  background: #fff;
-  border-radius: 3px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  padding: 10px 10px 15px;
-  pointer-events: auto;
-}
 .header {
   display: grid;
   grid-column-gap: 5px;
