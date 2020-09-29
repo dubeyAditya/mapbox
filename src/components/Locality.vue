@@ -18,11 +18,6 @@ export default {
   },
   components: {
     MapBox
-  },
-  methods: {
-    onLayerClick(attributes) {
-      //console.log(attributes);
-    },
   }
 }
 </script>
